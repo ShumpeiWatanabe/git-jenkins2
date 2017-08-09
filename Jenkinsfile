@@ -1,3 +1,3 @@
-stage('build') {
-  sh 'python --version'
+node {
+   echo 'Hello World'
 }
