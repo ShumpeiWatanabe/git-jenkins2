@@ -1,7 +1,3 @@
-stages {
-    stage('build') {
-        steps {
-            sh 'python --version'
-        }
-    }
+stage('build') {
+  sh 'python --version'
 }
