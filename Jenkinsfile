@@ -1,5 +1,5 @@
 node {
   stage('build'){
-    echo 'Hello World'
+    sh 'python --version'
   }
 }
