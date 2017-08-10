@@ -1,7 +1,7 @@
 node {
   stage('build'){
     checkout scm
-    sh 'ls -lrt'
+    sh 'ls -lr'
     sh 'python helloworld.py'
   }
 }
