@@ -5,7 +5,8 @@ pipeline {
         stage('Example Build') {
             steps {
 		checkout scm
-		sh ‘python helloworld.py’
+		//sh ‘python helloworld.py’
+		echo ‘helloworld’
             }
         }
     }
