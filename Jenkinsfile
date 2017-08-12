@@ -1,7 +1,10 @@
-
 pipeline {
-    agent { label 'slavejenkins' } 
-    stage(‘hello world’){
-        echo ‘hello world’
+    agent { label ‘slavejenkins’ } 
+    stages {
+        stage('Example Build') {
+            steps {
+                sh ‘echo ‘hello’’
+            }
+        }
     }
 }
