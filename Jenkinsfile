@@ -1,7 +1,12 @@
-node(‘slavejenkins’){
-  stage('build'){
-    checkout scm
-    sh 'ls -lr'
-    sh 'python helloworld.py'
-  }
+
+pipeline {
+    agent { label 'slavejenkins' } 
+    stages {
+        stage('Example Build') {
+            steps {
+		checkout scm
+		sh ‘python helloworld.py’
+            }
+        }
+    }
 }
