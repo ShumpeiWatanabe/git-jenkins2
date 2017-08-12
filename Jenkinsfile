@@ -3,11 +3,9 @@ pipeline {
     agent { label 'slavejenkins' } 
     stages {
         stage('Example Build') {
-            steps {
-		checkout scm
-		//sh ‘python helloworld.py’
-		echo ‘helloworld’
-            }
+	    checkout scm
+	    //sh ‘python helloworld.py’
+	    echo ‘helloworld’
         }
     }
 }
