@@ -1,10 +1,11 @@
 pipeline {
-    agent { label ‘slavejenkins’ } 
-    stages {
-        stage('Example Build') {
-            steps {
-                sh ‘pwd’
-            }
-        }
+  agent { label ’slavejenkins’ }
+  stages {
+    stage('build') {
+      steps {
+        sh 'pip --version'
+        sh 'python --version'
+      }
     }
+  }
 }
