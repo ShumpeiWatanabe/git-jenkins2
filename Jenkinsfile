@@ -1,5 +1,10 @@
 pipeline {
-  agent { label ’slavejenkins’ }
+  agent {
+    node {
+      label 'slavejenkins'
+      customWorkspace ‘/home/shumpei/’
+    }
+  }
   stages {
     stage('build') {
       steps {
