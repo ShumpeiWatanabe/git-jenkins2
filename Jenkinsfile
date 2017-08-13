@@ -16,7 +16,7 @@ pipeline {
             def ub = docker.image('dockerforjenkins.azurecr.io/ubuntu:shumpei')
             ub.pull()
             ub.inside{
-              sh 'pwd'
+              sh 'python3 --version'
             }
           }
         }
