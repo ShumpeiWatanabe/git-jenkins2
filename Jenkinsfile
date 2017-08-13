@@ -8,8 +8,10 @@ pipeline {
     stage('build') {
       steps {
         script{
-          docker.image('ubuntu:shumpei').inside{
-            sh 'pwd'
+          def ub = docker.image('dockerforjenkins.azurecr.io/ubuntu:shumpei')
+          ub.pull()
+          ub.inside{
+          sh 'pwd'
           }
         }
       }
