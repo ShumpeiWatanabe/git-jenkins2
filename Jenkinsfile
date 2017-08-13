@@ -7,7 +7,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pwd'
+        def ub = docker.image('ubuntu:shumpei')
+        ub.pull()
+        ub.inside{
+          sh 'pwd'
+        }
       }
     }
   }
