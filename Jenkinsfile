@@ -8,10 +8,11 @@ pipeline {
     stage('build') {
       steps {
         script{
-          def ub = docker.image('dockerforjenkins.azurecr.io/ubuntu:shumpei')
-          ub.pull()
-          ub.inside{
-          sh 'pwd'
+          // This step should not normally be used in your script. Consult the inline help for details.
+          withDockerRegistry([credentialsId: 'aab1025f-c719-4b62-a17c-b20422031469', url: 'dockerforjenkins.azurecr.io']) {
+            def ub = docker.image(ubuntu:shumpei).inside{
+              sh 'pwd'
+            }
           }
         }
       }
