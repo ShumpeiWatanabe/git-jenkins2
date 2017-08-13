@@ -16,7 +16,7 @@ pipeline {
           //  ub.inside{
           //    sh 'pwd'
           //  }
-          }
+          //}
         }
       }
     }
